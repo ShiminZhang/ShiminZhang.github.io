@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-02-05T09:32:55.479Z</updated>
+  <updated>2023-02-05T15:21:02.634Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,14 +21,15 @@
     <link href="http://example.com/2023/02/01/pipeline-of-scheduling/"/>
     <id>http://example.com/2023/02/01/pipeline-of-scheduling/</id>
     <published>2023-02-01T03:22:18.000Z</published>
-    <updated>2023-02-05T09:32:55.479Z</updated>
+    <updated>2023-02-05T15:21:02.634Z</updated>
     
-    <content type="html"><![CDATA[<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+    <content type="html"><![CDATA[<p>现在是2月5日22.50pm<br>Week1 Day8（因为节后算8天）</p><p>原计划协同agenda，hexo，todo，格志，四个记录软件去做工作生活的记录流<br>希望一个工作的流程是：agenda记录思考和拆解-&gt; todo记录具体目标和节点 -&gt; hexo记录反思，格志全程伴随记录心路和平复心情<br>实际上发生的：agenda记录思考和拆解-&gt;没做todo-&gt;来不及hexo反思, 格志拉满<br>原因：做一步看一步，没有整体规划<br>周末去了趟中山，用掉一天<br>收拾家，招待朋友过元宵，用掉一天</p><p>可以改进的地方</p><ol><li>无法随时随地去hexo写正经记录，需要想办法处理</li><li>家里要减慢搞乱的速度和收拾的效率，主要是衣服乱扔的问题，以后每天的衣服要分成 全新，要洗，穿过但暂时不洗三种状态，分别放在衣柜，沙发，洗衣机上<br>尽量少买点东西，盒子太多真的很麻烦</li><li>再简单的工作也要做记录</li><li>考虑买台mbp，随时带着旅游的时候也能掏出来。要不天天背包带着公司这台？<br>可它不是我的，我好不爽，天天背来背去的也好麻烦<br>买个新的好贵啊草</li><li>考虑找一找在家以外的地方也能充分休息的办法？</li></ol><p>做的不错的地方</p><ol><li>起码agenda慢慢上手了</li><li>中山-虎门-黄埔 1&#x2F;3 done</li><li>家收拾的不错，起码能见人</li><li>对招待客人逐渐熟悉</li><li>即使发现来不及写richtext文档了还是写了这篇记录</li><li>通过格志帮我理解我的情绪越来越熟练了，内耗显著减少</li></ol><p>这周的收获：</p><ol><li>看了流浪地球，理解了传承的价值。</li><li>在中山意识到，做任何career都是可以有职业素养的，工程师要严谨务实求优化，将军要鼓舞士气运筹帷幄，探险家要方向明确勇于善于面对未知。</li><li>看完源码就要做好记录，不然很容易忘掉</li><li>人永远是趋利避害的，区别在于他的自我概念是否扩散到外界（认不认为别人的利益也重要），以及对于利害的认知是否高明（目光长远深刻）</li></ol><h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
     
     
       
       
-    <summary type="html">&lt;h3 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h3&gt;</summary>
+    <summary type="html">&lt;p&gt;现在是2月5日22.50pm&lt;br&gt;Week1 Day8（因为节后算8天）&lt;/p&gt;
+&lt;p&gt;原计划协同agenda，hexo，todo，格志，四个记录软件去做工作生活的记录流&lt;br&gt;希望一个工作的流程是：agenda记录思考和拆解-&amp;gt; todo记录具体目标和节点 -&amp;g</summary>
       
     
     
@@ -42,12 +43,12 @@
   
   <entry>
     <title>UE4 资产引用机制 wip</title>
-    <link href="http://example.com/2023/01/29/testtest/"/>
-    <id>http://example.com/2023/01/29/testtest/</id>
+    <link href="http://example.com/2023/01/29/AssetReference/"/>
+    <id>http://example.com/2023/01/29/AssetReference/</id>
     <published>2023-01-29T07:59:29.000Z</published>
-    <updated>2023-02-05T09:32:54.431Z</updated>
+    <updated>2023-02-05T15:19:54.144Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h3><p>UE4 Assets有对其他资产的引用时，会存有strong&#x2F;soft references。</p><p>interestingly, assetregistry has a method called GetReferencers which returns those references</p><p>所以可以通过查看它的源码来看一个asset是如何存储一个reference的</p><h3 id="AssetRegistry"><a href="#AssetRegistry" class="headerlink" title="AssetRegistry"></a>AssetRegistry</h3><p>AR 输入pkg name 输出所有referencing pkg name<br>用FAssetIdentifier结构作为中转</p><p>ARgenerator 生成ARState<br>总有哪个地方是生成CachedDependsNodes的地方</p><p>State的CreateOrFindDependsNode</p><p>AR是单例<br>AR的DependencyDataGathered用了COFD</p><p>AR tick更新BackgroundDependencyResults 然后每帧更新给DDG</p><p>有个专门的AssetDataGatherer去收集这些信息<br>ADG是个FRunnable，多线程扫描</p><blockquote><p>容器直接找.Add就好了</p></blockquote><p>ADG创建FNameTableArchiveReader去读数据</p><p><em>Idea1: 是找到FArchieve读写文件的逻辑，照着它去把二进制地址改了</em><br><em>Idea2: 找到Rename后改路径的逻辑，照着它写</em></p><blockquote><p>实现功能的时候可以想一下 引擎中可能的相关实现<br>甚至是上下游潜在的类似逻辑，比如改名会造成地址的变更， 甚至甚至是这样实现的好处</p></blockquote><p>选择按rename走<br>PopulateAssetrferencers里面找到了所有重命名asset相关引用</p><p>PerformAssetRename具体操作</p><p>里面启动了FSoftObjectPathRenameSerializer 但我严重怀疑不是这个<br>那个应该就是给softobjectpath加redirector然后保存<br>还真不是，HardObjectReference在其他地方</p><p>Serializer 遍历property<br>通过skip判断是否要序列化<br>通过操作符规定如何序列化</p><p>FSoftObjectPathRenameSerializer传入重定向器表</p><p>AssetRegistry里登记了委托onAssetRenamed</p><h3 id="asset-replacement"><a href="#asset-replacement" class="headerlink" title="asset replacement"></a>asset replacement</h3><p>主要看ObjectTools里的ConsolidateObjects</p><p>ForceReplaceReferences</p><p>先load packages</p><p>累了<br>先不看了<br>毁灭吧</p>]]></content>
+    <content type="html"><![CDATA[<h3 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h3><p>UE4 Assets有对其他资产的引用时，会存有strong&#x2F;soft references。</p><p>interestingly, assetregistry has a method called GetReferencers which returns those references</p><p>所以可以通过查看它的源码来看一个asset是如何存储一个reference的</p><h3 id="AssetRegistry"><a href="#AssetRegistry" class="headerlink" title="AssetRegistry"></a>AssetRegistry</h3><p>AR 输入pkg name 输出所有referencing pkg name<br>用FAssetIdentifier结构作为中转</p><p>ARgenerator 生成ARState<br>总有哪个地方是生成CachedDependsNodes的地方</p><p>State的CreateOrFindDependsNode</p><p>AR是单例<br>AR的DependencyDataGathered用了COFD</p><p>AR tick更新BackgroundDependencyResults 然后每帧更新给DDG</p><p>有个专门的AssetDataGatherer去收集这些信息<br>ADG是个FRunnable，多线程扫描</p><blockquote><p>容器直接找.Add就好了</p></blockquote><p>ADG创建FNameTableArchiveReader去读数据</p><p><em>Idea1: 是找到FArchieve读写文件的逻辑，照着它去把二进制地址改了</em><br><em>Idea2: 找到Rename后改路径的逻辑，照着它写</em></p><blockquote><p>实现功能的时候可以想一下 引擎中可能的相关实现<br>甚至是上下游潜在的类似逻辑，比如改名会造成地址的变更， 甚至甚至是这样实现的好处</p></blockquote><p>选择按rename走<br>PopulateAssetrferencers里面找到了所有重命名asset相关引用</p><p>PerformAssetRename具体操作</p><p>里面启动了FSoftObjectPathRenameSerializer 但我严重怀疑不是这个<br>那个应该就是给softobjectpath加redirector然后保存<br>还真不是，HardObjectReference在其他地方</p><p>Serializer 遍历property<br>通过skip判断是否要序列化<br>通过操作符规定如何序列化</p><p>FSoftObjectPathRenameSerializer传入重定向器表</p><p>AssetRegistry里登记了委托onAssetRenamed</p><h3 id="asset-replacement"><a href="#asset-replacement" class="headerlink" title="asset replacement"></a>asset replacement</h3><p>主要看ObjectTools里的ConsolidateObjects</p><p>ForceReplaceReferences</p><p>先load packages</p><p>累了<br>先不看了<br>毁灭吧</p><p>后来发现真是这个东西<br>可能UE4的Renaming和Asset合并是两拨人实现的<br>为啥实现会不一样呢</p>]]></content>
     
     
       
@@ -62,11 +63,18 @@
   
   <entry>
     <title>UE4 RichText源码解析 wip</title>
-    <link href="http://example.com/2023/01/29/hello-world/"/>
-    <id>http://example.com/2023/01/29/hello-world/</id>
+    <link href="http://example.com/2023/01/29/RichText/"/>
+    <id>http://example.com/2023/01/29/RichText/</id>
     <published>2023-01-29T07:34:10.766Z</published>
-    <updated>2023-02-05T09:32:53.485Z</updated>
+    <updated>2023-02-05T15:19:53.160Z</updated>
     
+    <content type="html"><![CDATA[<p>SRichTextBlock<br>Ctor内创建Parser Mashaller和TextLayoutCache<br>绘制时根据TextLayoutCache指定大小与绘制<br>Parser解析文本，使用的是FDefaultRichTextMarkupParser实现IRichTextMarkupParser接口<br>?所以只要写新的parser就能实现奇奇怪怪的功能了？<br>Parser先用CalculateLineRangesFromString把文本按换行符解析成行<br>然后在ParserLineRanges里解析tag，形成tag-stringrange map<br>一个LineParseResult包含一个Range代表字符串位置，一个RunParseResult Ary，RunParseResult记录对每个Tag对应的标签名和范围<br>最后再处理EscapeSequence<br>？metadata是个啥？</p><p>Marshaller里拿到结果之后，根据配置的Decorator和StyleSet对应的tag信息生成Linedata传给TextLayout<br>textLayout根据这些data生成具体的LineView<br>这些都在GetDesiredSize里更新<br>OnPaint会调用</p><p>渲染：<br>AllotedGeometry：文本框几何？<br>LineView本身的size offset scale<br>如果在CullingRect之外就不渲染</p><p>然后渲染高光</p><p>Run是被放在Block里的，确定位置后遍历LineView的Block去渲染</p><p>FSlateTextRun渲染，传给SlateDrawElement</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;SRichTextBlock&lt;br&gt;Ctor内创建Parser Mashaller和TextLayoutCache&lt;br&gt;绘制时根据TextLayoutCache指定大小与绘制&lt;br&gt;Parser解析文本，使用的是FDefaultRichTextMarkupParser实现</summary>
+      
     
     
     
