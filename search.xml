@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>pipeline of scheduling wip</title>
+      <link href="/2023/02/01/pipeline-of-scheduling/"/>
+      <url>/2023/02/01/pipeline-of-scheduling/</url>
+      
+        <content type="html"><![CDATA[<h3 id=""><a href="#" class="headerlink" title=""></a></h3>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 生活 </tag>
+            
+            <tag> 工作 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>UE4 资产引用机制 wip</title>
+      <link href="/2023/01/29/testtest/"/>
+      <url>/2023/01/29/testtest/</url>
+      
+        <content type="html"><![CDATA[<h3 id="Preface"><a href="#Preface" class="headerlink" title="Preface"></a>Preface</h3><p>UE4 Assets有对其他资产的引用时，会存有strong&#x2F;soft references。</p><p>interestingly, assetregistry has a method called GetReferencers which returns those references</p><p>所以可以通过查看它的源码来看一个asset是如何存储一个reference的</p><h3 id="AssetRegistry"><a href="#AssetRegistry" class="headerlink" title="AssetRegistry"></a>AssetRegistry</h3><p>AR 输入pkg name 输出所有referencing pkg name<br>用FAssetIdentifier结构作为中转</p><p>ARgenerator 生成ARState<br>总有哪个地方是生成CachedDependsNodes的地方</p><p>State的CreateOrFindDependsNode</p><p>AR是单例<br>AR的DependencyDataGathered用了COFD</p><p>AR tick更新BackgroundDependencyResults 然后每帧更新给DDG</p><p>有个专门的AssetDataGatherer去收集这些信息<br>ADG是个FRunnable，多线程扫描</p><blockquote><p>容器直接找.Add就好了</p></blockquote><p>ADG创建FNameTableArchiveReader去读数据</p><p><em>Idea1: 是找到FArchieve读写文件的逻辑，照着它去把二进制地址改了</em><br><em>Idea2: 找到Rename后改路径的逻辑，照着它写</em></p><blockquote><p>实现功能的时候可以想一下 引擎中可能的相关实现<br>甚至是上下游潜在的类似逻辑，比如改名会造成地址的变更， 甚至甚至是这样实现的好处</p></blockquote><p>选择按rename走<br>PopulateAssetrferencers里面找到了所有重命名asset相关引用</p><p>PerformAssetRename具体操作</p><p>里面启动了FSoftObjectPathRenameSerializer 但我严重怀疑不是这个<br>那个应该就是给softobjectpath加redirector然后保存<br>还真不是，HardObjectReference在其他地方</p><p>Serializer 遍历property<br>通过skip判断是否要序列化<br>通过操作符规定如何序列化</p><p>FSoftObjectPathRenameSerializer传入重定向器表</p><p>AssetRegistry里登记了委托onAssetRenamed</p><h3 id="asset-replacement"><a href="#asset-replacement" class="headerlink" title="asset replacement"></a>asset replacement</h3><p>主要看ObjectTools里的ConsolidateObjects</p><p>ForceReplaceReferences</p><p>先load packages</p><p>累了<br>先不看了<br>毁灭吧</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>UE4 RichText源码解析 wip</title>
+      <link href="/2023/01/29/hello-world/"/>
+      <url>/2023/01/29/hello-world/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
