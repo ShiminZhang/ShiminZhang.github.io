@@ -1,0 +1,10 @@
+http://example.com/categories/index.html
+http://example.com/404/index.html
+http://example.com/tags/index.html
+http://example.com/2024/02/21/testPosting/
+http://example.com/testPage/index.html
+http://example.com/2024/02/21/testPosting-1/
+http://example.com/2024/02/21/hello-world/
+http://example.com/Biography/index.html
+http://example.com/
+http://example.com/tags/Testing/
