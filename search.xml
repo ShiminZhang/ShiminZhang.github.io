@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>HomePage</title>
+    <url>/2024/02/21/HomePage/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Biography</title>
     <url>/2024/02/21/Biography/</url>
     <content><![CDATA[<h1><span id="experience">Experience</span></h1><h1><span id="projects">Projects</span></h1><h1><span id="publications">Publications</span></h1><h1><span id="research-topics">Research topics</span></h1><span id="more"></span>]]></content>
@@ -9,11 +14,6 @@
         <tag>phd</tag>
         <tag>public</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>HomePage</title>
-    <url>/2024/02/21/HomePage/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>link to bio</title>
