@@ -3,33 +3,12 @@
   <entry>
     <title>Biography</title>
     <url>/2024/02/21/Biography/</url>
-    <content><![CDATA[<h1><span id="experience">Experience</span></h1><h1><span id="projects">Projects</span></h1><h1><span id="publications">Publications</span></h1><h1><span id="research-topics">Research topics</span></h1><span id="more"></span>]]></content>
+    <content><![CDATA[<span id="more"></span>
+<h1><span id="experience">Experience</span></h1><h1><span id="projects">Projects</span></h1><h1><span id="publications">Publications</span></h1><h1><span id="research-topics">Research topics</span></h1>]]></content>
       <tags>
         <tag>bio</tag>
         <tag>phd</tag>
         <tag>public</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HomePage</title>
-    <url>/2024/02/21/HomePage/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>link to bio</title>
-    <url>/2024/02/21/link-to-bio/</url>
-    <content><![CDATA[<p></p>]]></content>
-  </entry>
-  <entry>
-    <title>testPosting</title>
-    <url>/2024/02/21/testPosting/</url>
-    <content><![CDATA[<p>balalalllala</p>
-<span id="more"></span>
-
-<p>aallalalallala</p>
-]]></content>
-      <tags>
-        <tag>Testing</tag>
       </tags>
   </entry>
 </search>

@@ -1,14 +1,11 @@
+http://example.com/about/index.html
+http://example.com/Biography/index.html
 http://example.com/2024/02/21/Biography/
-http://example.com/2024/02/21/link-to-bio/
-http://example.com/2024/02/21/testPosting/
-http://example.com/2024/02/21/HomePage/
 http://example.com/categories/index.html
 http://example.com/404/index.html
 http://example.com/tags/index.html
 http://example.com/testPage/index.html
-http://example.com/Biography/index.html
 http://example.com/
 http://example.com/tags/bio/
 http://example.com/tags/phd/
 http://example.com/tags/public/
-http://example.com/tags/Testing/
