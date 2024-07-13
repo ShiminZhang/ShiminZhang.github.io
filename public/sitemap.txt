@@ -1,6 +1,6 @@
+http://example.com/2024/02/21/Biography/
 http://example.com/about/index.html
 http://example.com/Biography/index.html
-http://example.com/2024/02/21/Biography/
 http://example.com/categories/index.html
 http://example.com/404/index.html
 http://example.com/tags/index.html
