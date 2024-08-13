@@ -1,15 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Biography</title>
+    <title>Hello World!</title>
     <url>/2024/02/21/Biography/</url>
     <content><![CDATA[<span id="more"></span>
 
-<h1><span id="experience">Experience</span></h1><h1><span id="projects">Projects</span></h1><h1><span id="publications">Publications</span></h1><h1><span id="research-topics">Research topics</span></h1>]]></content>
+<p>Please refer to the about page for more information!</p>
+]]></content>
       <tags>
         <tag>bio</tag>
         <tag>phd</tag>
         <tag>public</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Resume Update</title>
+    <url>/2024/08/13/Resume-Update/</url>
+    <content><![CDATA[<h3><span id="shimin-zhang"><strong>Shimin Zhang</strong></span></h3><ul>
+<li><strong>Email:</strong> <a href="mailto:&#x67;&#x61;&#x72;&#101;&#116;&#x68;&#46;&#x7a;&#x68;&#97;&#110;&#103;&#x40;&#x75;&#119;&#97;&#x74;&#101;&#x72;&#108;&#x6f;&#x6f;&#x2e;&#99;&#97;">&#x67;&#x61;&#x72;&#101;&#116;&#x68;&#46;&#x7a;&#x68;&#97;&#110;&#103;&#x40;&#x75;&#119;&#97;&#x74;&#101;&#x72;&#108;&#x6f;&#x6f;&#x2e;&#99;&#97;</a></li>
+<li><strong>Website:</strong> <a href="http://shiminzhang.github.io/">ShiminZhang.github.io</a></li>
+</ul>
+<hr>
+<p><strong>Professional Summary:</strong><br>Accomplished Game Developer with a strong foundation in computer science and hands-on experience in AI and machine learning integration into gaming applications. Proven ability to lead development teams and innovate with new technologies.</p>
+<hr>
+<h3><span id="education"><strong>Education</strong></span></h3><p><strong>University of Waterloo (2018 - 2022)</strong></p>
+<ul>
+<li><strong>Bachelor of Computer Science, Honors. Distinction</strong></li>
+<li><strong>GPA:</strong> 83.88/100 (3.57/4)</li>
+<li><strong>Scholarship</strong><ul>
+<li>University of Waterloo President’s Scholarship 2019</li>
+<li>Faculty of Mathematics Scholarship 2019,2020,2021,2022</li>
+</ul>
+</li>
+<li><strong>Relevant Courses:</strong><ul>
+<li>Artificial Intelligence(A-), Machine Learning(A-), Computer Graphics(A-)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3><span id="professional-experience"><strong>Professional Experience</strong></span></h3><p><strong>Game Developer</strong></p>
+<ul>
+<li><strong>Tencent, Shenzhen (May 2022 - April 2024)</strong><ul>
+<li>Spearheaded the integration of AI technologies within game production. Developed and deployed an innovative image-sound synchronization tool using machine learning, enhancing narrative impact in games. Introduced a secure facial recognition feature, improving system integrity and user trust.</li>
+<li>Collaborated closely with design teams to craft and maintain various gameplay systems including login, dialogue, animation sequence etc. Help the team maintain the quality of our product during a time of lack of human resource by independently maintain all those distinct systems.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Game Developer Intern</strong></p>
+<ul>
+<li><strong>Tencent, Shenzhen (June 2021 - August 2021)</strong><ul>
+<li>Led the development and deployment of an independent 3D RPG game focusing on advanced environmental interactions and NPC AI. Return offer granted due to this minigame.</li>
+<li>Managed a team of interns in creating a strategic 2D music game, resulting in an internal award for innovation.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Vehicle Simulation Engineer Intern</strong></p>
+<ul>
+<li><strong>Momenta, Suzhou (September 2020 - December 2020)</strong><ul>
+<li>Supported the adoption of data-driven methodologies, enhancing simulation accuracy and efficiency.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3><span id="projects"><strong>Projects</strong></span></h3><p><strong>Retrieval Augmented Generation: UE Code Generator</strong></p>
+<ul>
+<li><strong>Duration:</strong> March 2024 - May 2024</li>
+<li>Engineered a code generation plugin for Unreal Engine 4, significantly streamlining the development process for game developers. Successfully deployed in a commercial project.</li>
+</ul>
+<hr>
+<h3><span id="technical-skills"><strong>Technical Skills</strong></span></h3><ul>
+<li><strong>Programming Languages:</strong> Proficient in C++, Python, Lua</li>
+<li><strong>Technologies:</strong> Expert in Unreal Engine 4; Experienced with PyTorch, Docker</li>
+</ul>
+<hr>
+]]></content>
   </entry>
 </search>
