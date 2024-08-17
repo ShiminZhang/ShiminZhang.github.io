@@ -4,16 +4,16 @@
   <url>
     <loc>http://example.com/about/index.html</loc>
     
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-08-17</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://example.com/Biography/index.html</loc>
+    <loc>http://example.com/2024/08/13/Resume-Update/</loc>
     
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-08-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -22,34 +22,7 @@
   <url>
     <loc>http://example.com/2024/02/21/Biography/</loc>
     
-    <lastmod>2024-02-23</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/categories/index.html</loc>
-    
-    <lastmod>2024-02-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/404/index.html</loc>
-    
-    <lastmod>2024-02-21</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/index.html</loc>
-    
-    <lastmod>2024-02-21</lastmod>
+    <lastmod>2024-08-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -58,7 +31,43 @@
   <url>
     <loc>http://example.com/testPage/index.html</loc>
     
-    <lastmod>2024-02-21</lastmod>
+    <lastmod>2024-07-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/categories/index.html</loc>
+    
+    <lastmod>2024-07-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/index.html</loc>
+    
+    <lastmod>2024-07-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/Biography/index.html</loc>
+    
+    <lastmod>2024-07-13</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/404/index.html</loc>
+    
+    <lastmod>2024-07-13</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -67,7 +76,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-08-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -75,21 +84,21 @@
   
   <url>
     <loc>http://example.com/tags/bio/</loc>
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/phd/</loc>
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/public/</loc>
-    <lastmod>2024-02-23</lastmod>
+    <lastmod>2024-08-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
